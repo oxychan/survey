@@ -41,45 +41,89 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="tanggal_survey">TANGGAL SURVEY:</label>
+                                <label for="tanggal_survey">Tanggal Survey:</label>
                                 <input type="date" class="form-control" id="tanggal_survey" placeholder=""
                                     name="tanggal_survey">
                             </div>
 
                             <div class="form-group">
-                                <label for="umur">UMUR:</label>
+                                <label for="umur">Umur:</label>
                                 <input type="number" class="form-control" id="umur" placeholder="" name="umur">
                             </div>
 
                             <div class="form-group">
-                                <label for="jenis_kelamin">JENIS KELAMIN:</label></P>
-                                <input type='radio' name='gender' value='male'>laki-laki&nbsp
-                                <input type='radio' name='gender' value='female'>perempuan&nbsp
+                                <label for="jenis_kelamin">Jenis Kelamin:</label></P>
+                                <div class="form-check">
+                                    <input type='radio' name='jenis_kelamin'  class="form-check-input"
+                                        value='male' id="jk1" /> 
+                                    <label for="jk1"> laki-laki</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='jenis_kelamin' class="form-check-input"
+                                        value='female' id="jk2" />
+                                    <label for="jk2"> perempuan</label>
+                                </div>
+
+                            </div>
                                 <span></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="pendidikan_terakhir">PENDIDIKAN TERAKHIR:</label></P>
-                                <input type='radio' name='pendidikan_terakhir' value='SD' />SD&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='SMP' />SMP&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='SMA' />SMA&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='D1, D2, D3, D4' />D1, D2, D3,
-                                D4&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='S1' />S1&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='S2' />S2&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='S3' />S3&nbsp
-                                <input type='radio' name='pendidikan_terakhir' value='TIDAK_SEKOLAH' />TIDAK
-                                SEKOLAH&nbsp
+                                <label for="pendidikan_terakhir">PENDIDIKAN TERAKHIR:</label>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt1" class="form-check-input" value='SD' />
+                                    <label for="pt1">sd</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt2" class="form-check-input" value='SMP' />
+                                    <label for="pt2">smp</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt3" class="form-check-input" value='SMA' />
+                                    <label for="pt3">sma</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt4" class="form-check-input" value='D1, D2, D3, D4' />
+                                    <label for="pt4">>D1, D2, D3, D4</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt5" class="form-check-input" value='S1' />
+                                    <label for="pt5">s1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt6" class="form-check-input" value='S2' />
+                                    <label for="pt6">s2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir' id="pt7" class="form-check-input" value='S3' />
+                                    <label for="pt7">s3</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pendidikan_terakhir'  id="pt8" class="form-check-input" value='TIDAK_SEKOLAH' />
+                                    <label for="pt8">tidak sekolah</label>
+                                </div>
+
                             </div>
 
                             <div class="form-group">
-                                <label for="pekerjaan">PEKERJAAN:</label></P>
-                                <input type='radio' name='pekerjaan' value='PNS/TNI/POLRI' />PNS/TNI/POLRI&nbsp
-                                <input type='radio' name='pekerjaan' value='PEGAWAI SWASTA' />PEGAWAI
-                                SWASTA&nbsp
-                                <input type='radio' name='pekerjaan'
-                                    value='WIRASWASTA/WIRAUSAHA' />WIRASWASTA/WIRAUSAHA&nbsp
-                                <input type='radio' name='pekerjaan' value='PELAJAR/MAHASISWA' />PELAJAR/MAHASISWA&nbsp
+                                <label for="pekerjaan">PEKERJAAN:</label>
+                                <div class="form-check">
+                                    <input type='radio' name='pekerjaan' id="pj1" class="form-check-input" value='PNS/TNI/POLRI' />
+                                    <label for="pj1">PNS/TNI/POLRI</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pekerjaan' id="pj2" class="form-check-input" value='PEGAWAI SWASTA' />
+                                    <label for="pj2">PEGAWAI SWASTA</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pekerjaan' id="pj3" class="form-check-input" value='WIRASWASTA/WIRAUSAHA' />
+                                    <label for="pj3">WIRASWASTA/WIRAUSAHA</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type='radio' name='pekerjaan' id="pj4" class="form-check-input" value='PELAJAR/MAHASISWA' />
+                                    <label for="pj4">PELAJAR/MAHASISWA</label>
+                                </div>
+                                
 
                                 <div class="form-group">
                                     <br />
@@ -89,12 +133,27 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="suku_bangsa">SUKU BANGSA:</label></P>
-                                    <input type='radio' name='suku_bangsa' value='JAWA' />JAWA&nbsp
-                                    <input type='radio' name='suku_bangsa' value='MADURA' />MADURA&nbsp
-                                    <input type='radio' name='suku_bangsa' value='SUNDA' />SUNDA&nbsp
-                                    <input type='radio' name='suku_bangsa' value='BATAK' />BATAK&nbsp
-                                    <input type='radio' name='suku_bangsa' value='BANJAR' />BANJAR&nbsp
+                                    <label for="suku_bangsa">SUKU BANGSA:</label>
+                                    <div class="form-check">
+                                        <input type='radio' name='suku_bangsa'  id="sb1" class="form-check-input" value='JAWA' />JAWA
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input type='radio' name='suku_bangsa' id="sb2" class="form-check-input" value='MADURA' />MADURA
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input type='radio' name='suku_bangsa' id="sb3" class="form-check-input" value='SUNDA' />SUNDA
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input type='radio' name='suku_bangsa' id="sb4" class="form-check-input" value='BATAK' />BATAK
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input type='radio' name='suku_bangsa' id="sb5" class="form-check-input" value='BANJAR' />BANJAR
+
+                                    </div>
 
                                     <div class="form-group">
                                         <br />

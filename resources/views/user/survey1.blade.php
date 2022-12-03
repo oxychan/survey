@@ -103,7 +103,10 @@
                                                     <button type="BERIKUTNYA" class="btn btn-default">BERIKUTNYA</button>
                                                     <ul class="pagination">
                                                         <li class="page-item disabled">
-
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                     </form>
                                 </div>
                             </div>

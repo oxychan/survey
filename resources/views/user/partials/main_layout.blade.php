@@ -4,10 +4,11 @@
 <head>
     <title>Purple Buzz HTML Template with Bootstrap 5 Beta 1</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="{{ asset('admin/assets/css/main/app.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/main/app-dark.css') }}" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->

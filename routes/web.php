@@ -17,4 +17,9 @@ Route::get('/', function () {
     return view('user.index');
 });
 
-Route::view('/survey', 'user.survey');
+Route::prefix('survey')->group(function () {
+    Route::view('/', 'user.survey1');
+    Route::view('/2', 'user.survey2');
+    Route::view('/3', 'user.survey3');
+    Route::view('/4', 'user.survey4');
+});

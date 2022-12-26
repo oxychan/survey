@@ -26,7 +26,7 @@ Route::prefix('survey')->group(function () {
     Route::view('/1', 'user.survey1')->name('survey.1');
     Route::view('/2', 'user.survey2')->name('survey.2');
     Route::view('/3', 'user.survey3')->name('survey.3');
-    Route::view('/4', 'user.survey4');
+    Route::view('/4', 'user.survey4')->name('survey.4');
 });
 
 Route::post('submit', [FormController::class, 'submit'])->name('submit');

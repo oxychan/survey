@@ -9,7 +9,7 @@
                         <h4 class="card-title">Form - 3/4</h4>
                     </div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="{{ route('survey.4') }}">
                             <div class="form-group mt-4">
                                 <label class="form-label fw-bold" for="kemampuan_petugas">Bagaimana Pendapat
                                     saudara Tentang Kompetensi / Kemampuan Petugas dalam Pelayanan ?</label>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,5 @@ Route::prefix('survey')->group(function () {
     Route::view('/3', 'user.survey3');
     Route::view('/4', 'user.survey4');
 });
+
+Route::post('submit', [FormController::class, 'submit'])->name('submit');

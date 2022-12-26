@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Purple Buzz HTML Template with Bootstrap 5 Beta 1</title>
+    <title>e-survey</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,6 +27,7 @@
 
 <body>
     <script src="{{ asset('admin/assets/js/initTheme.js') }}"></script>
+    <script src="{{ asset('jquery/jquery-3.6.3.js') }}"></script>
 
     {{-- Navbar --}}
     @include('user.partials.navbar')
@@ -65,6 +66,7 @@
             });
         });
     </script>
+    @yield('script')
     <!-- Templatemo -->
     <script src="{{ asset('user/assets/js/templatemo.js') }}"></script>
     <!-- Custom -->

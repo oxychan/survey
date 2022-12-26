@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header">
-                        <h4 class="card-title">Form ke-1</h4>
+                        <h4 class="card-title">Form - 1/4</h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('submit') }}" method="POST">

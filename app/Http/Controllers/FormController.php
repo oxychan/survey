@@ -8,6 +8,7 @@ class FormController extends Controller
 {
     public function submit(Request $request)
     {
-        dd($request->except(['pj_lain', 'sb_lain']));
+        // dd($request->except(['pj_lain', 'sb_lain']));
+        return redirect()->route('survey.2');
     }
 }

@@ -21,6 +21,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
+    @yield('additional-css')
+
 
 
 </head>

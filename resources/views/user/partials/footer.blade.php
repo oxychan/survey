@@ -18,11 +18,12 @@
                     <ul class="list-unstyled text-light light-300">
                         <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
-                                href="index.html">Beranda</a>
+                                href="{{ route('index') }}">Beranda</a>
                         </li>
                         <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
-                                class="text-decoration-none text-light py-1" href="about.html">Survei</a>
+                                class="text-decoration-none text-light py-1"
+                                href="{{ route('survey.step.one') }}">Survei</a>
                         </li>
                     </ul>
             </div>

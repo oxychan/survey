@@ -23,8 +23,8 @@
                                     Website Ini Digunakan Untuk Mengisi Survei Kepuasan Masyarakat Terhadap Pengadilan Agama
                                     Banyuwangi Kelas 1A
                                 </p>
-                                <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#"
-                                    role="button">Isi Survei</a>
+                                <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4"
+                                    href="{{ route('survey.step.one') }}" role="button">Isi Survei</a>
                             </div>
                         </div>
 

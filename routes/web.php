@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\FormController;
+use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,17 +16,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('user.index');
-});
+})->name('index');
 
-Route::get('survey', function () {
-    Route::redirect('survey.1');
-});
+Route::get('testing', [FormController::class, 'createSurveyOne']);
 
 Route::prefix('survey')->group(function () {
-    Route::view('/1', 'user.survey1')->name('survey.1');
-    Route::view('/2', 'user.survey2')->name('survey.2');
-    Route::view('/3', 'user.survey3')->name('survey.3');
-    Route::view('/4', 'user.survey4')->name('survey.4');
+    Route::get('/', function () {
+        return redirect()->route('survey.step.one');
+    });
+
+    Route::get('/step-one', [SurveyController::class, 'createSurveyStepOne'])->name('survey.step.one');
+    Route::post('/step-one', [SurveyController::class, 'storeSurveyStepOne'])->name('survey.store.step.one');
+
+    Route::get('/step-two', [SurveyController::class, 'createSurveyStepTwo'])->name('survey.step.two');
+    Route::post('/step-two', [SurveyController::class, 'storeSurveyStepTwo'])->name('survey.store.step.two');
+
+    Route::get('/step-three', [SurveyController::class, 'createSurveyStepThree'])->name('survey.step.three');
+    Route::post('/step-three', [SurveyController::class, 'storeSurveyStepThree'])->name('survey.store.step.three');
+
+    Route::get('/step-four', [SurveyController::class, 'createSurveyStepFour'])->name('survey.step.four');
+    Route::post('/step-four', [SurveyController::class, 'storeSurveyStepFour'])->name('survey.store.step.four');
 });
 
-Route::post('submit', [FormController::class, 'submit'])->name('submit');
+Route::post('submit', [SurveyController::class, 'submit'])->name('submit');

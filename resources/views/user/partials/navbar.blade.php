@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <a class="nav-link btn-primary rounded-pill" href="#">Masuk</a>
+                    <a class="btn btn-primary rounded-pill px-4" href="{{ route('login') }}">Masuk</a>
                 </div>
             </div>
         </div>

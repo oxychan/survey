@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{{ asset('admin/assets/css/main/app.css') }}" />
-    <link rel="stylesheet" href="{{ asset('admin/assets/css/main/app-dark.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('admin/assets/css/main/app-dark.css') }}" /> --}}
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -76,7 +76,7 @@
 
 
     <script src="{{ asset('admin/assets/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
 </body>
 

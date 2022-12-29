@@ -67,7 +67,7 @@
                 </li>
 
                 <li class="sidebar-item mt-5">
-                    <form action="{{ route('logout') }}">
+                    <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input type="submit" class="btn btn-danger" value="Logout">
                     </form>

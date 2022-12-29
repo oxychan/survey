@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,4 +39,11 @@ Route::prefix('survey')->group(function () {
     Route::post('/step-four', [SurveyController::class, 'storeSurveyStepFour'])->name('survey.store.step.four');
 });
 
-Route::post('submit', [SurveyController::class, 'submit'])->name('submit');
+Route::get('login', [LoginController::class, 'login'])->name('login');
+Route::post('login', [LoginController::class, 'authenticate'])->name('post.login');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', function () {
+        return view('user.survey1');
+    });
+});

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('user.index');
 })->name('index');
-
-Route::get('testing', [FormController::class, 'createSurveyOne']);
 
 Route::prefix('survey')->group(function () {
     Route::get('/', function () {
@@ -43,7 +42,11 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'authenticate'])->name('post.login');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('dashboard', function () {
-        return view('user.survey1');
+    Route::prefix('dashboard')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+        Route::get('/user-list', [DashboardController::class, 'userList'])->name('dashboard.user.list');
+        Route::get('/survey-list', [DashboardController::class, 'surveyList'])->name('dashboard.survey.list');
     });
+
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

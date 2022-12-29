@@ -17,16 +17,28 @@ class LoginController extends Controller
 
     public function authenticate(AuthRequest $request)
     {
-        $credentials = $request->validate();
+        $credentials = $request->safe()->except(['_token']);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('dashboard.index');
         }
 
         return back()->withErrors([
             'username' => 'Username atau password salah.',
         ])->onlyInput('username');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect()->intended('index');
+    }
+
+    public function username()
+    {
+        return 'username';
     }
 }

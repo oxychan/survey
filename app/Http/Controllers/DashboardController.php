@@ -11,8 +11,9 @@ class DashboardController extends Controller
     public function index()
     {
         $title = 'Admin';
+        $count = (object)array('survey' => Survey::count(), 'user' => User::count());
 
-        return view('admin.dashboard.index', compact('title'));
+        return view('admin.dashboard.index', compact('title', 'count'));
     }
 
     public function userList()

@@ -49,4 +49,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+    Route::post('/survey-list/{survey}', [SurveyController::class, 'destroy'])->name('survey.destroy');
+
+    Route::get('excel', [SurveyController::class, 'exportExcel'])->name('to-excel');
 });

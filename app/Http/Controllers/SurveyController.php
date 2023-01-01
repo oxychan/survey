@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\SurveyExport;
 use App\Models\Survey;
-use Illuminate\Http\Request;
 use App\Http\Requests\Form1Request;
 use App\Http\Requests\Form2Request;
 use App\Http\Requests\Form3Request;
 use App\Http\Requests\Form4Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Session;
 
 class SurveyController extends Controller
@@ -42,6 +43,10 @@ class SurveyController extends Controller
     {
         $survey = Session::get('survey');
 
+        if (!isset($survey->nama_responden)) {
+            return redirect()->route('survey.step.one');
+        }
+
         return view('user.survey2', compact('survey'));
     }
 
@@ -60,6 +65,10 @@ class SurveyController extends Controller
     public function createSurveyStepThree()
     {
         $survey = Session::get('survey');
+
+        if (!isset($survey->kesesuaian_persyaratan_jns_pelayanan)) {
+            return redirect()->route('survey.step.two');
+        }
 
         return view('user.survey3', compact('survey'));
     }
@@ -81,6 +90,10 @@ class SurveyController extends Controller
     {
         $survey = Session::get('survey');
 
+        if (!isset($survey->kemampuan_petugas_pelayanan)) {
+            return redirect()->route('survey.step.three');
+        }
+
         return view('user.survey4', compact('survey'));
     }
 
@@ -94,6 +107,23 @@ class SurveyController extends Controller
 
         Session::forget('survey');
 
-        return redirect()->route('index');
+        return redirect()->route('survey.step.one')->with('insertSuccess', 'Data survey berhasil ditambahkan ke database!');
+    }
+
+    public function show(Survey $survey)
+    {
+        return view('admin.dashboard.detail_survey', compact('survey'));
+    }
+
+    public function destroy(Survey $survey)
+    {
+        $survey->delete();
+
+        return redirect()->back()->with('deleteSuccess', 'Survey berhasil dihapus');
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new SurveyExport, 'survey.xlsx');
     }
 }

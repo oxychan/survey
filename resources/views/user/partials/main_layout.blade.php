@@ -77,6 +77,7 @@
 
     <script src="{{ asset('admin/assets/js/bootstrap.js') }}"></script>
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/pages/component-toasts.js') }}"></script>
 
 </body>
 

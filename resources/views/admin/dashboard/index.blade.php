@@ -21,7 +21,7 @@
                                         <h6 class="text-muted font-semibold">
                                             Jumlah Survey
                                         </h6>
-                                        <h6 class="font-extrabold mb-0">112.000</h6>
+                                        <h6 class="font-extrabold mb-0">{{ $count->survey }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -38,8 +38,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-10 col-lg-12 col-xl-12 col-xxl-9">
-                                        <h6 class="text-muted font-semibold">Jumlah User</h6>
-                                        <h6 class="font-extrabold mb-0">183.000</h6>
+                                        <h6 class="text-muted font-semibold">Jumlah Admin</h6>
+                                        <h6 class="font-extrabold mb-0">{{ $count->user }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -96,5 +96,7 @@
                 </div>
             </div>
         </section>
+
+
     </div>
 @endsection

@@ -2,12 +2,11 @@
     <div class="card">
         <div class="card-header">{{ $title }}</div>
         <div class="card-body">
-            <div>
-                <div class="d-flex justify-content-end">
-                    <a href="" class="btn btn-primary">Tambah</a>
-                </div>
-            </div>
             <table class="table" id="table1">
+                <div class="form-group">
+                    <a href="{{ route('to-excel') }}" class="btn btn-success">Download
+                        Excel</a>
+                </div>
                 <thead>
 
                     <tr>
@@ -28,10 +27,12 @@
                             <td>{{ $survey->pekerjaan }}</td>
                             <td>{{ $survey->tanggal_survey }}</td>
                             <td>
-                                <div class="form-inline">
-                                    <a href="#" class="btn btn-secondary">Detail</a>
-                                    <a href="#" class="btn btn-danger">Hapus</a>
-                                </div>
+                                <form class="form-inline" action="{{ route('survey.destroy', $survey) }}" method="POST">
+                                    @csrf
+                                    <a type="button" class="btn btn-outline-success mdl" data-bs-toggle="modal"
+                                        data-bs-target="#detail-survey" data-survey="{{ $survey }}">Detail</a>
+                                    <input class="btn btn-danger" type="submit" value="Hapus" />
+                                </form>
                             </td>
                         </tr>
                     @empty

@@ -1,7 +1,27 @@
 @extends('user.partials.main_layout')
 
+
+
 @section('container')
     <div class="container">
+        @if (session()->has('insertSuccess'))
+            <div class="d-flex justify-content-end">
+                <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="false" preserveAspectRatio="xMidYMid slice"
+                            focusable="false">
+                            <rect width="100%" height="100%" fill="#007aff"></rect>
+                        </svg>
+                        <strong class="me-auto">Operasi sukses</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        {{ session()->get('insertSuccess') }}
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="d-flex justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card shadow">
@@ -74,14 +94,14 @@
                             <div class="form-group">
                                 <label class="form-label fw-bold" for="jenis_kelamin">Jenis Kelamin</label>
                                 <div class="form-check">
-                                    <input type='radio' name='jenis_kelamin' class="form-check-input" value='Laki-laki'
-                                        id="jk1"
+                                    <input type='radio' name='jenis_kelamin' class="form-check-input"
+                                        value='Laki-laki' id="jk1"
                                         {{ old('jenis_kelamin') == 'Laki-laki' || ($survey != null && $survey->jenis_kelamin == 'Laki-laki') ? 'checked' : '' }} />
                                     <label class="form-label" for="jk1">Laki-laki</label>
                                 </div>
                                 <div class="form-check">
-                                    <input type='radio' name='jenis_kelamin' class="form-check-input" value='Perempuan'
-                                        id="jk2"
+                                    <input type='radio' name='jenis_kelamin' class="form-check-input"
+                                        value='Perempuan' id="jk2"
                                         {{ old('jenis_kelamin') == 'Perempuan' || ($survey != null && $survey->jenis_kelamin == 'Perempuan') ? 'checked' : '' }} />
                                     <label class="form-label" for="jk2">Perempuan</label>
                                 </div>

@@ -44,6 +44,8 @@
     <script src="{{ asset('admin/assets/extensions/jquery/jquery.min.js') }}"></script>
     <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
     <script src="{{ asset('admin/assets/js/pages/datatables.js') }}"></script>
+
+    @yield('additional-js')
 </body>
 
 </html>

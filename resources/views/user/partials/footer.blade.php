@@ -32,8 +32,40 @@
                 <h2 class="h4 pb-lg-3 text-light light-300">For Client</h2>
                 <ul class="list-unstyled text-light light-300">
                     <li class="pb-2">
+                        <i class="bx-fw bx bx-book-reader bx-xs"></i><a href=""
+                            class="text-decoration-none text-light py-1">Jl. Jaksa Agung Suprapto No. 52 Banyuwangi</a>
+                    </li>
+                    <li class="pb-2">
                         <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1"
-                            href="tel:081219211266">081219211266</a>
+                            href="tel:0333424325">(0333)-424 325</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bx-phone bx-xs"></i><a href="tel:0333412420"
+                            class="text-decoration-none text-light py-1">(0333)-412 420</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bx-mail-send bx-xs"></i><a href="mailto:pabanyuwangi@gmail.com"
+                            class="text-decoration-none text-light py-1">pabanyuwangi@gmail.com</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bxl-facebook bx-xs"></i><a href="facebook.com/PA.Bwi"
+                            class="text-decoration-none text-light py-1">PA.Bwi</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bxl-instagram bx-xs"></i><a href="instagram.com/pabanyuwangi"
+                            class="text-decoration-none text-light py-1">@pabanyuwangi</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bxl-youtube bx-xs"></i><a href="youtube.com/Pa Banyuwangi"
+                            class="text-decoration-none text-light py-1">Pa Banyuwangi</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bx-world bx-xs"></i><a href="http://pa-banyuwangi.go.id"
+                            class="text-decoration-none text-light py-1">www.pa-banyuwangi.go.id</a>
+                    </li>
+                    <li class="pb-2">
+                        <i class="bx-fw bx bxl-whatsapp bx-xs"></i><a href="wa.me/+6285233787997"
+                            class="text-decoration-none text-light py-1">www.pa-banyuwangi.go.id</a>
                     </li>
                 </ul>
             </div>

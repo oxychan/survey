@@ -1,7 +1,5 @@
 @extends('user.partials.main_layout')
 
-
-
 @section('container')
     <div class="container">
         @if (session()->has('insertSuccess'))

@@ -27,4 +27,11 @@ class Form4Request extends FormRequest
             'saran' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'saran.required' => 'Tidak boleh kosong.'
+        ];
+    }
 }

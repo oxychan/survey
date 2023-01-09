@@ -34,4 +34,18 @@ class Form3Request extends FormRequest
             'harapan_penanganan_pengaduan_pengguna' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'kemampuan_petugas_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kemampuan_petugas_pelayanan.required' => 'Tidak boleh kosong.',
+            'perilaku_petugas_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_perilaku_petugas_pelayanan.required' => 'Tidak boleh kosong.',
+            'kualitas_sarpras.required' => 'Tidak boleh kosong.',
+            'harapan_kualitas_sarpras.required' => 'Tidak boleh kosong.',
+            'penanganan_pengaduan_pengguna.required' => 'Tidak boleh kosong.',
+            'harapan_penanganan_pengaduan_pengguna.required' => 'Tidak boleh kosong.',
+        ];
+    }
 }

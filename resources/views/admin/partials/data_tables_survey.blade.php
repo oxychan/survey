@@ -6,14 +6,14 @@
                 @csrf
                 <div class="form-inline">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <label for="start_date" class="form-label">Tanggal Awal</label>
                             <input type="date" class="form-control" name="start_date" id="start_date">
                             @error('start_date')
                                 <div class="alert alert-danger mt-2">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <label for="end_date" class="form-label">Tanggal Selesai</label>
                             <input type="date" class="form-control" name="end_date" id="end_date">
                             @error('end_date')

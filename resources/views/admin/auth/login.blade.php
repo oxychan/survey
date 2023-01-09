@@ -18,7 +18,11 @@
                         <a href="index.html"><img src="assets/images/logo/logo.svg" alt="Logo" /></a>
                     </div> --}}
                     @if (Session::has('errors'))
-                        <p class="alert alert-info">{{ Session::get('errors') }}</p>
+                        <div class="alert alert-danger">
+                            @foreach ($errors->all() as $error)
+                                <p> {{ $error }}</p>
+                            @endforeach
+                        </div>
                     @endif
                     <h1 class="auth-title">Log in.</h1>
                     <p class="auth-subtitle mb-5">

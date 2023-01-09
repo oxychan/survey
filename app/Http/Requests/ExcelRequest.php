@@ -28,4 +28,12 @@ class ExcelRequest extends FormRequest
             'end_date' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'start_date.required' => 'Tidak boleh kosong.',
+            'end_date.required' => 'Tidak boleh kosong.',
+        ];
+    }
 }

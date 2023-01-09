@@ -36,4 +36,20 @@ class Form2Request extends FormRequest
             'harapan_kesesuaian_produk_pelayanan' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'kesesuaian_persyaratan_jns_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kesesuaian_persyaratan_jns_pelayanan.required' => 'Tidak boleh kosong.',
+            'kemudahan_prosedur_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kemudahan_prosedur_pelayanan.required' => 'Tidak boleh kosong.',
+            'kecepatan_waktu_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kecepatan_waktu_pelayanan.required' => 'Tidak boleh kosong.',
+            'kewajaran_biaya_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kewajaran_biaya_pelayanan.required' => 'Tidak boleh kosong.',
+            'kesesuaian_produk_pelayanan.required' => 'Tidak boleh kosong.',
+            'harapan_kesesuaian_produk_pelayanan.required' => 'Tidak boleh kosong.',
+        ];
+    }
 }

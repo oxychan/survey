@@ -28,4 +28,12 @@ class AuthRequest extends FormRequest
             'password' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'username.required' => 'Tidak boleh kosong.',
+            'password.required'  => 'Tidak boleh kosong.'
+        ];
+    }
 }

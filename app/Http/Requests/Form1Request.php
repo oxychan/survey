@@ -34,4 +34,18 @@ class Form1Request extends FormRequest
             'suku_bangsa' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'nama_responden.required' => 'Tidak boleh kosong.',
+            'jenis_pelayanan.required' => 'Tidak boleh kosong.',
+            'tanggal_survey.required' => 'Tidak boleh kosong.',
+            'umur.required' => 'Tidak boleh kosong.',
+            'jenis_kelamin.required' => 'Tidak boleh kosong.',
+            'pendidikan_terakhir.required' => 'Tidak boleh kosong.',
+            'pekerjaan.required' => 'Tidak boleh kosong.',
+            'suku_bangsa.required' => 'Tidak boleh kosong.',
+        ];
+    }
 }

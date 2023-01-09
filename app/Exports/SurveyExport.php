@@ -8,12 +8,21 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class SurveyExport implements FromCollection, WithHeadings
 {
+    private $startDate;
+    private $endDate;
+
+    public function __construct($startDate, $endDate)
+    {
+        $this->startDate = $startDate;
+        $this->endDate = $endDate;
+    }
+
     /**
      * @return \Illuminate\Support\Collection
      */
     public function collection()
     {
-        return Survey::all();
+        return Survey::whereBetween('tanggal_survey', [$this->startDate, $this->endDate])->get();
     }
 
     public function headings(): array

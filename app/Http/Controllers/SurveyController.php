@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\SurveyExport;
+use App\Http\Requests\ExcelRequest;
 use App\Models\Survey;
 use App\Http\Requests\Form1Request;
 use App\Http\Requests\Form2Request;
@@ -122,8 +123,9 @@ class SurveyController extends Controller
         return redirect()->back()->with('deleteSuccess', 'Survey berhasil dihapus');
     }
 
-    public function exportExcel()
+    public function exportExcel(ExcelRequest $request)
     {
-        return Excel::download(new SurveyExport, 'survey.xlsx');
+        $request->safe()->except('_token');
+        return Excel::download(new SurveyExport($request['start_date'], $request['end_date']), 'survey.xlsx');
     }
 }

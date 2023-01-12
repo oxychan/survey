@@ -54,7 +54,15 @@
                                 <h4>Jumlah Pengisi Survey {{ date('Y') }}</h4>
                             </div>
                             <div class="card-body">
-                                <div id="chart-profile-visit"></div>
+
+                                <div class="apexcharts-canvas">
+                                    {!! $chart->container() !!}
+
+                                    <script src="{{ $chart->cdn() }}"></script>
+
+                                    {{ $chart->script() }}
+                                </div>
+
                             </div>
                         </div>
                     </div>
